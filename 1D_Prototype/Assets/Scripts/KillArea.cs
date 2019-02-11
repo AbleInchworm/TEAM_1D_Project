@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class KillArea : MonoBehaviour {
 
-    private Player_Movement player;
+    public Player_Movement player;
 
     void Awake()
     {
