@@ -44,6 +44,7 @@ public class Player_Movement : MonoBehaviour {
 
     [Header("Corpse_Bounce")]
     public float bounceForce;
+    [HideInInspector]
     public float bounceJumpForce;
    
     [Header("On_Respawn")]

@@ -9,14 +9,5 @@ public class Exploding_Corpse : MonoBehaviour {
     public void Playexplode()
     {
         explode.Play();
-    }
-
-    private void Update()
-    {
-        if (Input.GetKey(KeyCode.B))
-        {
-            print("boom");           
-            explode.Play();
-        }
-    }
+    }  
 }
