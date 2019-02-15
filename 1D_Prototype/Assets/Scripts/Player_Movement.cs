@@ -24,6 +24,7 @@ public class Player_Movement : MonoBehaviour {
     private bool isOnCorpse;
     private bool isOnFire;
     private bool bouncing;
+    private bool isInAir;
 
 
 
@@ -115,9 +116,8 @@ public class Player_Movement : MonoBehaviour {
     }
 
     void Update()
-    {  
-        //timerLocation = fireTimerText.transform.position;
-        //timerLocation = new Vector3.transform.position;
+    {
+        Debug.Log(isGrounded);
 
         PlayerCrouch();
 
@@ -126,6 +126,8 @@ public class Player_Movement : MonoBehaviour {
         PlayerStateCheck();
 
         PlayerJump();
+
+        HandleLayers();
 
         Suicide();
 
@@ -139,9 +141,8 @@ public class Player_Movement : MonoBehaviour {
         if (isGrounded == true)
         {
             extraJumps = extraJumpValue;
-            playerAnim.SetBool("Player_Is_Jumping", false);
+            isInAir = false;
         }
-
 
         // triggers the SuperJump function to be called in the fixed update
         if (isOnCorpse == true)
@@ -153,6 +154,21 @@ public class Player_Movement : MonoBehaviour {
         {
             isBurnt = true;
         }
+
+        if (isJumping)
+        {
+            isInAir = true;
+        }
+
+        if (!isInAir)
+        {
+            playerAnim.SetBool("Player_Land", true);
+        }
+        else
+        {
+            playerAnim.SetBool("Player_Land", false);
+        }
+     
     }
 
     public void PlayerMovement()
@@ -199,21 +215,21 @@ public class Player_Movement : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0)
         {
-            isJumping = true;
-            playerAnim.SetBool("Player_Is_Jumping", true);
+            isJumping = true;           
             jumpTimeCounter = jumpHoldTime;
             rb2d.velocity += Vector2.up * jumpHeight;
             extraJumps--;
-
         }
         else if (isGrounded == true && Input.GetKeyDown(KeyCode.Space) && extraJumps == 0)
-        {
-            rb2d.velocity += Vector2.up * jumpHeight;
+        {           
+            rb2d.velocity += Vector2.up * jumpHeight;          
         }
 
         // jump force increases the longer jump is held
         if (Input.GetKey(KeyCode.Space) && isJumping == true)
         {
+            playerAnim.SetTrigger("Jump");
+
             if (jumpTimeCounter > 0)
             {
                 rb2d.velocity = Vector2.up * jumpHeight;
@@ -221,15 +237,14 @@ public class Player_Movement : MonoBehaviour {
             }
             else
             {
-                isJumping = false;
-                //playerAnim.SetBool("Player_Is_Jumping", false);
+                isJumping = false;               
             }
         }
 
         if (Input.GetKeyUp(KeyCode.Space))
         {
             isJumping = false;
-            //playerAnim.SetBool("Player_Is_Jumping", false);
+            playerAnim.ResetTrigger("Jump");
         }
     }
 
@@ -295,12 +310,22 @@ public class Player_Movement : MonoBehaviour {
         }
     }
     public void FireCheck()
-    {
-        
-
+    {        
         if (isBurnt == true)
         {           
             StartBurnTime();
+        }
+    }
+
+    private void HandleLayers()
+    {
+        if (!isGrounded)
+        {
+            playerAnim.SetLayerWeight(1, 1);
+        }
+        else
+        {
+            playerAnim.SetLayerWeight(1, 0);
         }
     }
 
