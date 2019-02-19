@@ -964,8 +964,20 @@ PrefabInstance:
       propertyPath: respawnHere
       value: 
       objectReference: {fileID: 1813485625}
+    - target: {fileID: 934691111038847786, guid: 092bd3bb95b16e640914f546a5918c62,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243287004710917622, guid: a6294ea156c8657439c95da5f813b62c,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 092bd3bb95b16e640914f546a5918c62, type: 3}
+--- !u!82 &710617964 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 934691111038847786, guid: 092bd3bb95b16e640914f546a5918c62,
+    type: 3}
+  m_PrefabInstance: {fileID: 710617963}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &731572098 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1442287291, guid: d93ba69e4cc6c4a41a8a2a85996f42eb,
@@ -2170,6 +2182,62 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1375416881}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1427349309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1427349311}
+  - component: {fileID: 1427349310}
+  m_Layer: 0
+  m_Name: Audio_Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1427349310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427349309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82b4251c5318c474589fb19e8b98435d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pitchMin: 1
+  pitchMax: 2.5
+  playerFS:
+  - {fileID: 8300000, guid: 4a4975fca9529d54eb70302870ed77c4, type: 3}
+  - {fileID: 8300000, guid: 7623ec56c2c97df4d9ac3aae7fc0fef8, type: 3}
+  - {fileID: 8300000, guid: 15fd2b8bc11530f478b05b77b4e413cc, type: 3}
+  - {fileID: 8300000, guid: 90b9903a46304c941be06925ac610d1f, type: 3}
+  - {fileID: 8300000, guid: 4f2bdd0e14deefb49aa361c9d0cd9059, type: 3}
+  - {fileID: 8300000, guid: 6961bf272ba2c8242a9533703a906b3f, type: 3}
+  - {fileID: 8300000, guid: 8bf5288d447287f4c9a09773c863a7d7, type: 3}
+  playerSFX: {fileID: 710617964}
+  playerMixer: {fileID: 243287004710917622, guid: a6294ea156c8657439c95da5f813b62c,
+    type: 2}
+--- !u!4 &1427349311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427349309}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.4982996, y: 7.390177, z: 0.037064068}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1479092419 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4813111242901373451, guid: 40de4be0a2a6eb74a9cc5a5b0b8e012c,
