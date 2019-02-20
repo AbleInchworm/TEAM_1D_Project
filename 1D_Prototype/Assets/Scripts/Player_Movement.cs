@@ -329,6 +329,11 @@ public class Player_Movement : MonoBehaviour {
         }
     }
 
+    public void PlayerFS()
+    {
+        Audio_Manager.instance.RandomizeSFX(Audio_Manager.instance.playerFS);
+    }
+
 
 
 }
