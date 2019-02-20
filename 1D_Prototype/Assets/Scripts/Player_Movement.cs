@@ -25,8 +25,7 @@ public class Player_Movement : MonoBehaviour {
     private bool isOnFire;
     private bool bouncing;
     private bool isInAir;
-
-
+    private bool canMove;
 
     [Header("Player_Movement")]
     public float moveSpeed;
@@ -47,9 +46,11 @@ public class Player_Movement : MonoBehaviour {
     public float bounceForce;
     [HideInInspector]
     public float bounceJumpForce;
-   
+
     [Header("On_Respawn")]
+    public float respawnDelay = 3f;
     public Transform respawnHere;
+    public Animator deathUI;
 
     [Header("Burning")]
     private float burnTime;
@@ -88,7 +89,9 @@ public class Player_Movement : MonoBehaviour {
     }
 
     void Start()
-    {      
+    {
+
+        canMove = true;
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         extraJumps = extraJumpValue;
@@ -96,23 +99,25 @@ public class Player_Movement : MonoBehaviour {
         fireTimerText = fireTimer.GetComponent<Text>();
         fireTimerText.text = burnTime.ToString();
         newMoveSpeed = moveSpeed;
-
-
+        deathUI.SetBool("Death_Screen", false);
     }
 
     void FixedUpdate()
     {
-        // get the input of the A & D keys and apply motion to character        
-        moveInput = Input.GetAxis("Horizontal");
-        rb2d.velocity = new Vector2(moveInput * newMoveSpeed, rb2d.velocity.y);
-        
-        if (bouncing == true)
+        if (canMove)
         {
-            corpseBounce();
-            bouncing = false;
-        }
+            // get the input of the A & D keys and apply motion to character        
+            moveInput = Input.GetAxis("Horizontal");
+            rb2d.velocity = new Vector2(moveInput * newMoveSpeed, rb2d.velocity.y);
 
-        corpseJump();
+            if (bouncing == true)
+            {
+                corpseBounce();
+                bouncing = false;
+            }
+
+            corpseJump();
+        }             
     }
 
     void Update()
@@ -135,8 +140,7 @@ public class Player_Movement : MonoBehaviour {
     }
 
     public void PlayerStateCheck()
-    {
-       
+    {       
         // reset double jump value
         if (isGrounded == true)
         {
@@ -213,39 +217,42 @@ public class Player_Movement : MonoBehaviour {
 
     public void PlayerJump()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0)
+        if (canMove)
         {
-            isJumping = true;           
-            jumpTimeCounter = jumpHoldTime;
-            rb2d.velocity += Vector2.up * jumpHeight;
-            extraJumps--;
-        }
-        else if (isGrounded == true && Input.GetKeyDown(KeyCode.Space) && extraJumps == 0)
-        {           
-            rb2d.velocity += Vector2.up * jumpHeight;          
-        }
-
-        // jump force increases the longer jump is held
-        if (Input.GetKey(KeyCode.Space) && isJumping == true)
-        {
-            playerAnim.SetTrigger("Jump");
-
-            if (jumpTimeCounter > 0)
+            if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0)
             {
-                rb2d.velocity = Vector2.up * jumpHeight;
-                jumpTimeCounter -= Time.deltaTime;
+                isJumping = true;
+                jumpTimeCounter = jumpHoldTime;
+                rb2d.velocity += Vector2.up * jumpHeight;
+                extraJumps--;
             }
-            else
+            else if (isGrounded == true && Input.GetKeyDown(KeyCode.Space) && extraJumps == 0)
             {
-                isJumping = false;               
+                rb2d.velocity += Vector2.up * jumpHeight;
             }
-        }
 
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            isJumping = false;
-            playerAnim.ResetTrigger("Jump");
-        }
+            // jump force increases the longer jump is held
+            if (Input.GetKey(KeyCode.Space) && isJumping == true)
+            {
+                playerAnim.SetTrigger("Jump");
+
+                if (jumpTimeCounter > 0)
+                {
+                    rb2d.velocity = Vector2.up * jumpHeight;
+                    jumpTimeCounter -= Time.deltaTime;
+                }
+                else
+                {
+                    isJumping = false;
+                }
+            }
+
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                isJumping = false;
+                playerAnim.ResetTrigger("Jump");
+            }
+        }     
     }
 
 
@@ -267,14 +274,22 @@ public class Player_Movement : MonoBehaviour {
 
     public void KillPlayer()
     {
+        canMove = false;
         isDead = false;
         isBurnt = false;
-        transform.position = respawnHere.transform.position;
-        burnTime = maxBurnTime;
+        deathUI.SetBool("Death_Screen", true);
+        playerAnim.SetBool("Is_Dead", true);
+        Audio_Manager.instance.RandomDeath(Audio_Manager.instance.playerDeath);
+
+        StartCoroutine(OnPlayerDeath());
+        
     }
 
     public void SpawnCorpse()
     {
+
+        KillPlayer();
+
         spawnCorpseHere = gameObject.transform.position; // sets the location where the corpse prefab should spwan
 
         clonedPrefab = Instantiate(targetClonePrefab, spawnCorpseHere, transform.rotation); // sets the desired clone to the spcified game object and location
@@ -284,16 +299,14 @@ public class Player_Movement : MonoBehaviour {
             if (corpses[0] != null)
                 Destroy(corpses[0].gameObject);
             corpses.RemoveAt(0);
-        }
-
-        KillPlayer();
+        }      
     }
 
     public void Suicide()
     {
         if (Input.GetKeyDown(KeyCode.M))
         {
-            SpawnCorpse();
+            SpawnCorpse();           
         }
     }
 
@@ -322,6 +335,7 @@ public class Player_Movement : MonoBehaviour {
         if (!isGrounded)
         {
             playerAnim.SetLayerWeight(1, 1);
+
         }
         else
         {
@@ -331,10 +345,20 @@ public class Player_Movement : MonoBehaviour {
 
     public void PlayerFS()
     {
-        Audio_Manager.instance.RandomizeSFX(Audio_Manager.instance.playerFS);
+        if (isGrounded)
+        {
+            Audio_Manager.instance.RandomPlayerFS(Audio_Manager.instance.playerFS); // if the player is grounded, allow the animation events to access the audio_manager
+        }      
     }
 
-
-
+    public IEnumerator OnPlayerDeath()
+    {
+        yield return new WaitForSeconds(respawnDelay);     
+        playerAnim.SetBool("Is_Dead", false);
+        deathUI.SetBool("Death_Screen", false);
+        transform.position = respawnHere.transform.position;
+        canMove = true;
+        burnTime = maxBurnTime;
+    }
 }
 
