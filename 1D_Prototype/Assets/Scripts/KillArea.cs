@@ -15,12 +15,15 @@ public class KillArea : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (player.isDead == false)
+        if (collision.gameObject.name == "Player_Controller")
         {
-            spiked.Play();
-            player.isDead = true;
-            player.KillPlayer();
+            if (player.isDead == false)
+            {
+                spiked.Play();
+                player.isDead = true;
+                player.KillPlayer();
 
-        }
+            }
+        }       
     }
 }

@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1239210780240234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 0}
+  m_LocalPosition: {x: -0.00000023842, y: 0.00000071526, z: 0}
+  m_LocalScale: {x: 0.1952542, y: 0.1952542, z: 0}
   m_Children: []
   m_Father: {fileID: 4048129869349546}
   m_RootOrder: 0
@@ -68,8 +68,8 @@ SpriteRenderer:
   m_SortingLayerID: -2142872831
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.8301887, g: 0.4268423, b: 0.4268423, a: 1}
+  m_Sprite: {fileID: 21300012, guid: 7f15f7c96e7432347a5048af137c7c26, type: 3}
+  m_Color: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -89,8 +89,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4048129869349546}
   - component: {fileID: 50717966889135296}
-  - component: {fileID: 61722864363140832}
   - component: {fileID: 114870910392402872}
+  - component: {fileID: 5460708405945662543}
   m_Layer: 11
   m_Name: Player_Corpse
   m_TagString: Untagged
@@ -135,32 +135,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61722864363140832
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1285991972539178}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.0037092268}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.74734265, y: 0.68098146}
-  m_EdgeRadius: 0
 --- !u!114 &114870910392402872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,6 +148,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explode: {fileID: 198640265309107322}
+--- !u!58 &5460708405945662543
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285991972539178}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.22, y: 0.15}
+  serializedVersion: 2
+  m_Radius: 0.59
 --- !u!1 &1757627566771260
 GameObject:
   m_ObjectHideFlags: 0

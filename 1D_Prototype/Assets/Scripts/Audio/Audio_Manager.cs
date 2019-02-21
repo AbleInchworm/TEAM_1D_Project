@@ -9,14 +9,14 @@ public class Audio_Manager : MonoBehaviour
 
     public float pitchMin;
     public float pitchMax;
-
+    public float sourceVol;
 
     public AudioClip[] playerFS;
+    public AudioClip[] playerDeath;
     public AudioSource playerSFX;
     public AudioMixerGroup playerMixer;
 
-    // Start is called before the first frame update
-
+    
     private void Awake()
     {
         if (instance == null) { instance = this; } // Checks if there is already a Audio manager and removes it
@@ -37,20 +37,24 @@ public class Audio_Manager : MonoBehaviour
         
     }
 
-    public void PlayerFS()
+    public void RandomPlayerFS (params AudioClip[] clips)
     {
-        int randomFS = Random.Range(0, playerFS.Length);        
-    }
-
-    public void RandomizeSFX (params AudioClip[] clips)
-    {
-        int randomIndex = Random.Range(0, playerFS.Length);
-        float randomPitch = Random.Range(pitchMin, pitchMax);
+        int randomIndex = Random.Range(0, playerFS.Length); // randomly select a clip from the footstep sound array
+        float randomPitch = Random.Range(pitchMin, pitchMax); // randomlly assign a pitch to that sound
 
         playerSFX.pitch = randomPitch;
         playerSFX.clip = clips[randomIndex];
         playerSFX.Play();
+    }
 
+    public void RandomDeath(params AudioClip[] clips)
+    {
+        int randomIndex = Random.Range(0, playerDeath.Length); // randomly select a clip from the death sound array
+        float randomPitch = Random.Range(pitchMin, pitchMax); // randomlly assign a pitch to that sound
+
+        playerSFX.pitch = randomPitch;
+        playerSFX.clip = clips[randomIndex];
+        playerSFX.Play();
     }
 
     public void PlaySound (AudioClip clip)
