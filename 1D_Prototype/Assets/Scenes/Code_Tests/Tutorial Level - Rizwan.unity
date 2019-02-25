@@ -377,6 +377,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114399127668525478, guid: 092bd3bb95b16e640914f546a5918c62,
+        type: 3}
+      propertyPath: respawnHere
+      value: 
+      objectReference: {fileID: 472476525}
+    - target: {fileID: 114399127668525478, guid: 092bd3bb95b16e640914f546a5918c62,
+        type: 3}
+      propertyPath: fireTimer
+      value: 
+      objectReference: {fileID: 1076372595}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 092bd3bb95b16e640914f546a5918c62, type: 3}
 --- !u!4 &181344387 stripped
@@ -931,6 +941,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 231c37f41657a144cb1118b6141629ba, type: 3}
+--- !u!4 &472476525 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4498677022554385576, guid: 13e41890e2b16b748899ef2f08cffa8d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1642328961}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &475075549
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1813,6 +1829,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1fcca89e81703544895777baab9bb067, type: 3}
+--- !u!1 &1076372595 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4682881390572672386, guid: 9e0d2cd827fd92841ac3e2263217df4e,
+    type: 3}
+  m_PrefabInstance: {fileID: 22934668}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1119882198
 PrefabInstance:
   m_ObjectHideFlags: 0
