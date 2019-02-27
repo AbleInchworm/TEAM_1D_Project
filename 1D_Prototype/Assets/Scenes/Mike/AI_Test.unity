@@ -1125,6 +1125,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 243287004710917622, guid: a6294ea156c8657439c95da5f813b62c,
         type: 2}
+    - target: {fileID: 50771714945328724, guid: 092bd3bb95b16e640914f546a5918c62,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 092bd3bb95b16e640914f546a5918c62, type: 3}
 --- !u!82 &710617964 stripped
@@ -2337,6 +2342,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1375416881}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1393272564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1393272565}
+  m_Layer: 0
+  m_Name: Terrain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1393272565
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393272564}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.25095, y: 9.13342, z: -0.40625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1479092419 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4813111242901373451, guid: 40de4be0a2a6eb74a9cc5a5b0b8e012c,
