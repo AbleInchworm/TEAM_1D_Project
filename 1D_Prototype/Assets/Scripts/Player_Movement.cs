@@ -201,6 +201,7 @@ public class Player_Movement : MonoBehaviour {
         if (Input.GetKeyUp(KeyCode.S))
         {
             isCrouching = false;
+            playerAnim.SetBool("Is_Crouching", false);
             newMoveSpeed = moveSpeed;
         }
 
@@ -210,6 +211,7 @@ public class Player_Movement : MonoBehaviour {
 
             if (isCrouching == true)
             {
+                playerAnim.SetBool("Is_Crouching", true);
                 newMoveSpeed = moveSpeed / crouchSpeedModifier;
             }
         }
