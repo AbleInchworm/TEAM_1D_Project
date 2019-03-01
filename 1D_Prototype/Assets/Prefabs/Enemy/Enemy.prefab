@@ -51,12 +51,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   player: {fileID: 0}
-  startwaitTime: 3
-  moveSpeed: 10
+  startwaitTime: 4
+  moveSpeed: 5
   target: {fileID: 0}
 --- !u!114 &1294898018093768825
 MonoBehaviour:
@@ -114,7 +111,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1294898018518110672}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.384972, y: 1.7484581, z: 0.016373258}
+  m_LocalPosition: {x: 0, y: 3.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 1294898018093768831}

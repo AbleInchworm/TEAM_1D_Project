@@ -10,6 +10,7 @@ public class Player_Movement : MonoBehaviour {
     // external scripts
     KillArea killArea;
     Exploding_Corpse corpseExplode;
+    CamShake cameraShake;
     public Animator playerAnim;
 
     // player animator  
@@ -275,7 +276,7 @@ public class Player_Movement : MonoBehaviour {
     }
 
     public void KillPlayer()
-    {
+    {       
         canMove = false;
         isDead = false;
         isBurnt = false;
@@ -349,7 +350,7 @@ public class Player_Movement : MonoBehaviour {
     {
         if (isGrounded)
         {
-            Audio_Manager.instance.RandomPlayerFS(Audio_Manager.instance.playerFS); // if the player is grounded, allow the animation events to access the audio_manager
+            Audio_Manager.instance.RandomPlayerFS(Audio_Manager.instance.playerFSGrass); // if the player is grounded, allow the animation events to access the audio_manager
         }      
     }
 

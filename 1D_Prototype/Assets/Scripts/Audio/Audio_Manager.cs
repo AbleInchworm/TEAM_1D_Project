@@ -11,7 +11,8 @@ public class Audio_Manager : MonoBehaviour
     public float pitchMax;
     public float sourceVol;
 
-    public AudioClip[] playerFS;
+    public AudioClip[] playerFSGrass;
+    public AudioClip[] playerFSConcrete;
     public AudioClip[] playerDeath;
     public AudioSource playerSFX;
     public AudioMixerGroup playerMixer;
@@ -39,7 +40,7 @@ public class Audio_Manager : MonoBehaviour
 
     public void RandomPlayerFS (params AudioClip[] clips)
     {
-        int randomIndex = Random.Range(0, playerFS.Length); // randomly select a clip from the footstep sound array
+        int randomIndex = Random.Range(0, playerFSGrass.Length); // randomly select a clip from the footstep sound array
         float randomPitch = Random.Range(pitchMin, pitchMax); // randomlly assign a pitch to that sound
 
         playerSFX.pitch = randomPitch;
