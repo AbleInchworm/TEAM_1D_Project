@@ -356,12 +356,13 @@ public class Player_Movement : MonoBehaviour {
 
     public IEnumerator OnPlayerDeath()
     {
-        yield return new WaitForSeconds(respawnDelay);     
+        yield return new WaitForSeconds(respawnDelay);
         playerAnim.SetBool("Is_Dead", false);
         deathUI.SetBool("Death_Screen", false);
         transform.position = respawnHere.transform.position;
         canMove = true;
         burnTime = maxBurnTime;
+    
     }
 }
 
