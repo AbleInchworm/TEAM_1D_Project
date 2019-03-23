@@ -107,9 +107,11 @@ MonoBehaviour:
   jumpHeight: 15
   jumpHoldTime: 0.2
   extraJumpValue: 1
-  bounceForce: 30
+  bounceForce: 50
   bounceJumpForce: 20
+  respawnDelay: 3
   respawnHere: {fileID: 0}
+  deathUI: {fileID: 0}
   maxBurnTime: 3
   targetClonePrefab: {fileID: 1285991972539178, guid: 40cd4998e1528184f997a6d2c0be66d6,
     type: 3}

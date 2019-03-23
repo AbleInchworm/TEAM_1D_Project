@@ -137,7 +137,9 @@ public class Player_Movement : MonoBehaviour {
 
         Suicide();
 
-        FireCheck();      
+        FireCheck();
+
+        fireTimerText.text = Mathf.Round(burnTime).ToString();
     }
 
     public void PlayerStateCheck()
@@ -316,7 +318,7 @@ public class Player_Movement : MonoBehaviour {
     public void StartBurnTime()
     {
         burnTime -= Time.deltaTime;
-        fireTimerText.text = burnTime.ToString();
+        fireTimerText.text = Mathf.Round(burnTime).ToString();
 
         if (burnTime < 0)
         {
