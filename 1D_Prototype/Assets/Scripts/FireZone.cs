@@ -8,7 +8,8 @@ public class FireZone : MonoBehaviour
 
     void Awake()
     {
-        player = Player_Movement.instance;
+        //player = Player_Movement.instance;
+        player = GameObject.Find("Player_Controller").GetComponent<Player_Movement>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
