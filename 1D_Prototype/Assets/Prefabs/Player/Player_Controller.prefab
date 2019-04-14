@@ -115,10 +115,15 @@ MonoBehaviour:
   maxBurnTime: 3
   targetClonePrefab: {fileID: 1285991972539178, guid: 40cd4998e1528184f997a6d2c0be66d6,
     type: 3}
+  Bean_Planted: {fileID: 5472314069427054811, guid: 83c0d47b08d08fe4996ccbfe9101153d,
+    type: 3}
   clonedPrefab: {fileID: 0}
   fireTimer: {fileID: 0}
   fireTimerText: {fileID: 0}
+  beanCounter: {fileID: 0}
+  beanCounterText: {fileID: 0}
   corpseLimit: 1
+  myBeans: 0
   spawnCorpseHere: {x: 0, y: 0}
   feetPos: {fileID: 4325296737971338}
   checkRadius: 0.3
@@ -131,6 +136,9 @@ MonoBehaviour:
   whatIsFire:
     serializedVersion: 2
     m_Bits: 4096
+  SceneManager: {fileID: 1630237728465387027, guid: e60c2687dacb2cb4894adf4328a89663,
+    type: 3}
+  newBeans: 0
 --- !u!95 &95534707675324450
 Animator:
   serializedVersion: 3
@@ -201,7 +209,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2142872831
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5ab5f3d552f102c4391078a3211c87ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

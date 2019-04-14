@@ -61,11 +61,18 @@ public class Player_Movement : MonoBehaviour {
     [Header("Corpse_Spawn")]
     
     public GameObject targetClonePrefab;
+    public GameObject Bean_Planted;
     public GameObject clonedPrefab;
     
     public GameObject fireTimer;
     public Text fireTimerText;
+
+    public GameObject beanCounter;
+    public Text beanCounterText;
+
     public int corpseLimit = 1;
+    public int myBeans;
+
     public Vector2 spawnCorpseHere;
     List<GameObject> corpses = new List<GameObject>();
 
@@ -82,11 +89,15 @@ public class Player_Movement : MonoBehaviour {
     [HideInInspector]
     public LayerMask whatIsFire;
 
-    
+    public GameObject SceneManager;
+    public bool newBeans;
+
+
     void Awake()
     {
         if (instance == null)
             instance = this;
+        newBeans = true;
     }
 
     void Start()
@@ -99,8 +110,11 @@ public class Player_Movement : MonoBehaviour {
         burnTime = maxBurnTime;
         fireTimerText = fireTimer.GetComponent<Text>();
         fireTimerText.text = burnTime.ToString();
+        beanCounterText = beanCounter.GetComponent<Text>();
+        beanCounterText.text = myBeans.ToString();
         newMoveSpeed = moveSpeed;
         deathUI.SetBool("Death_Screen", false);
+        Instantiate(SceneManager, transform.position, transform.rotation);
     }
 
     void FixedUpdate()
@@ -118,7 +132,14 @@ public class Player_Movement : MonoBehaviour {
             }
 
             corpseJump();
-        }             
+        }
+
+        if (newBeans)
+        {
+            myBeans = FindObjectOfType<Point_Tracker>().beansFromLevel;
+            newBeans = false;
+        }
+
     }
 
     void Update()
@@ -139,7 +160,13 @@ public class Player_Movement : MonoBehaviour {
 
         FireCheck();
 
+        PlayerPlant();
+
         fireTimerText.text = Mathf.Round(burnTime).ToString();
+        beanCounterText.text = myBeans.ToString();
+
+
+
     }
 
     public void PlayerStateCheck()
@@ -260,8 +287,21 @@ public class Player_Movement : MonoBehaviour {
         }     
     }
 
+    public void PlayerPlant()
+    {
+        if (canMove)
+        {
+            if (Input.GetKeyDown(KeyCode.Q) && (myBeans > 0) && (isGrounded))
+            {
+            spawnCorpseHere = gameObject.transform.position;
+            Instantiate(Bean_Planted, spawnCorpseHere, transform.rotation);
+            myBeans -= 1;
+            }
+        }
+    }
 
-    // bounces the character when he is on his corpse 
+
+            // bounces the character when he is on his corpse 
     void corpseBounce()
     {
         rb2d.velocity = Vector2.zero; //resetbounce force to stop stacking

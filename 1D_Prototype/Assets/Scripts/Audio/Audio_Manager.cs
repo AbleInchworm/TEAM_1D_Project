@@ -17,15 +17,16 @@ public class Audio_Manager : MonoBehaviour
     public AudioSource playerSFX;
     public AudioMixerGroup playerMixer;
 
-    
+    AudioSource m_MyAudioSource;
+    GameObject myplayerSFX;
+
     private void Awake()
     {
         if (instance == null) { instance = this; } // Checks if there is already a Audio manager and removes it
-        else if (instance != this) { Destroy(gameObject);}
+        else if (instance != this) { Destroy(gameObject); }
 
         DontDestroyOnLoad(gameObject); // Don't get rid of the audio manager when the scene changes
     }
-
 
     void Start()
     {
@@ -35,7 +36,9 @@ public class Audio_Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        myplayerSFX = GameObject.Find("playerSFX");
+        m_MyAudioSource = myplayerSFX.GetComponent<AudioSource>();
+        playerSFX = m_MyAudioSource;
     }
 
     public void RandomPlayerFS (params AudioClip[] clips)

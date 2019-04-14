@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Player_Corpse
+  - Tracker
   layers:
   - Default
   - TransparentFX
@@ -44,6 +45,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 2379930555
+    locked: 0
+  - name: Back-Front
+    uniqueID: 1128014395
     locked: 0
   - name: Player
     uniqueID: 2152094465
