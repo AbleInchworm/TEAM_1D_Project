@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class Player_Movement : MonoBehaviour {
 
@@ -90,19 +92,16 @@ public class Player_Movement : MonoBehaviour {
     public LayerMask whatIsFire;
 
     public GameObject SceneManager;
-    public bool newBeans;
 
 
     void Awake()
     {
         if (instance == null)
             instance = this;
-        newBeans = true;
     }
 
     void Start()
     {
-
         canMove = true;
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -119,6 +118,13 @@ public class Player_Movement : MonoBehaviour {
 
     void FixedUpdate()
     {
+        if ((FindObjectOfType<Point_Tracker>().beansFromLevel != 0))
+        { 
+            
+        myBeans = (FindObjectOfType<Point_Tracker>().beansFromLevel);
+        FindObjectOfType<Point_Tracker>().beansFromLevel = 0;
+        }
+
         if (canMove)
         {
             // get the input of the A & D keys and apply motion to character        
@@ -133,13 +139,6 @@ public class Player_Movement : MonoBehaviour {
 
             corpseJump();
         }
-
-        if (newBeans)
-        {
-            myBeans = FindObjectOfType<Point_Tracker>().beansFromLevel;
-            newBeans = false;
-        }
-
     }
 
     void Update()

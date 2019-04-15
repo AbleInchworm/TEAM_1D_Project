@@ -452,6 +452,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 926065359}
+    - target: {fileID: 193813129259244878, guid: 9e0d2cd827fd92841ac3e2263217df4e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 249
+      objectReference: {fileID: 0}
     - target: {fileID: 6901456586052731705, guid: 9e0d2cd827fd92841ac3e2263217df4e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -466,11 +471,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 91.3999
-      objectReference: {fileID: 0}
-    - target: {fileID: 193813129259244878, guid: 9e0d2cd827fd92841ac3e2263217df4e,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 249
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e0d2cd827fd92841ac3e2263217df4e, type: 3}
@@ -760,36 +760,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 50771714945328724, guid: 092bd3bb95b16e640914f546a5918c62,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 50771714945328724, guid: 092bd3bb95b16e640914f546a5918c62,
-        type: 3}
-      propertyPath: m_GravityScale
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 61812140765915412, guid: 092bd3bb95b16e640914f546a5918c62,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -1.7376659
-      objectReference: {fileID: 0}
-    - target: {fileID: 61812140765915412, guid: 092bd3bb95b16e640914f546a5918c62,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 2.502604
-      objectReference: {fileID: 0}
-    - target: {fileID: 61812140765915412, guid: 092bd3bb95b16e640914f546a5918c62,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: -0.0680933
-      objectReference: {fileID: 0}
-    - target: {fileID: 61812140765915412, guid: 092bd3bb95b16e640914f546a5918c62,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 8.539064
-      objectReference: {fileID: 0}
     - target: {fileID: 114399127668525478, guid: 092bd3bb95b16e640914f546a5918c62,
         type: 3}
       propertyPath: fireTimer
@@ -841,6 +811,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1630237728465387027, guid: e60c2687dacb2cb4894adf4328a89663,
         type: 3}
+    - target: {fileID: 50771714945328724, guid: 092bd3bb95b16e640914f546a5918c62,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50771714945328724, guid: 092bd3bb95b16e640914f546a5918c62,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 61812140765915412, guid: 092bd3bb95b16e640914f546a5918c62,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -1.7376659
+      objectReference: {fileID: 0}
+    - target: {fileID: 61812140765915412, guid: 092bd3bb95b16e640914f546a5918c62,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.502604
+      objectReference: {fileID: 0}
+    - target: {fileID: 61812140765915412, guid: 092bd3bb95b16e640914f546a5918c62,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0680933
+      objectReference: {fileID: 0}
+    - target: {fileID: 61812140765915412, guid: 092bd3bb95b16e640914f546a5918c62,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 8.539064
+      objectReference: {fileID: 0}
     - target: {fileID: 1051015857, guid: 092bd3bb95b16e640914f546a5918c62, type: 3}
       propertyPath: m_Offset.x
       value: 0.31
@@ -879,12 +879,12 @@ PrefabInstance:
     - target: {fileID: 4498677022554385576, guid: 13e41890e2b16b748899ef2f08cffa8d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 38.3
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4498677022554385576, guid: 13e41890e2b16b748899ef2f08cffa8d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3
+      value: -2.87
       objectReference: {fileID: 0}
     - target: {fileID: 4498677022554385576, guid: 13e41890e2b16b748899ef2f08cffa8d,
         type: 3}
