@@ -119,8 +119,7 @@ public class Player_Movement : MonoBehaviour {
     void FixedUpdate()
     {
         if ((FindObjectOfType<Point_Tracker>().beansFromLevel != 0))
-        { 
-            
+        {   
         myBeans = (FindObjectOfType<Point_Tracker>().beansFromLevel);
         FindObjectOfType<Point_Tracker>().beansFromLevel = 0;
         }
