@@ -130,6 +130,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Saw (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1703249686815060477, guid: d2120f0c570bbe443878a73bc0a79937,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1703249686815060473, guid: d2120f0c570bbe443878a73bc0a79937,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -198,6 +203,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HellPlatform_Hor (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 186536777736585357, guid: 9faa10360d24dd243a40e6685e0560e8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 186536777736585362, guid: 9faa10360d24dd243a40e6685e0560e8,
         type: 3}
@@ -366,6 +376,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HellWall_Hor2 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979550559832468429, guid: 05b9ddee2bb251b40896271cd5d08b05,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1979550559832468430, guid: 05b9ddee2bb251b40896271cd5d08b05,
         type: 3}
@@ -776,6 +791,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HellPlatform_Ver (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5235011573783335647, guid: 7e4df4a61da402442b99a33741e3466d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5235011573783335618, guid: 7e4df4a61da402442b99a33741e3466d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1015,6 +1035,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Saw
+      objectReference: {fileID: 0}
+    - target: {fileID: 1703249686815060477, guid: d2120f0c570bbe443878a73bc0a79937,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1703249686815060473, guid: d2120f0c570bbe443878a73bc0a79937,
         type: 3}
@@ -1483,6 +1508,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HellPlatform_Ver (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 5235011573783335647, guid: 7e4df4a61da402442b99a33741e3466d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5235011573783335618, guid: 7e4df4a61da402442b99a33741e3466d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1737,6 +1767,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Exit (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4649128138806254396, guid: f975cf69d09bb1b47aa601b105d4b5f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4649128138806254399, guid: f975cf69d09bb1b47aa601b105d4b5f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1891,6 +1926,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Saw (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1703249686815060477, guid: d2120f0c570bbe443878a73bc0a79937,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1703249686815060473, guid: d2120f0c570bbe443878a73bc0a79937,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1959,6 +1999,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HellPlatform_Hor (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 186536777736585357, guid: 9faa10360d24dd243a40e6685e0560e8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 186536777736585362, guid: 9faa10360d24dd243a40e6685e0560e8,
         type: 3}
@@ -2116,6 +2161,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HellWall_Hor2 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979550559832468429, guid: 05b9ddee2bb251b40896271cd5d08b05,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1979550559832468430, guid: 05b9ddee2bb251b40896271cd5d08b05,
         type: 3}
@@ -2391,6 +2441,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HellWall_Hor2 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 1979550559832468429, guid: 05b9ddee2bb251b40896271cd5d08b05,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1979550559832468430, guid: 05b9ddee2bb251b40896271cd5d08b05,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2556,6 +2611,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spike_Ver (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8024931708292922228, guid: b56583fefaa7f7d4694214da6d26758e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8024931708292922224, guid: b56583fefaa7f7d4694214da6d26758e,
         type: 3}
@@ -3033,6 +3093,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HellPlatform_Hor
       objectReference: {fileID: 0}
+    - target: {fileID: 186536777736585357, guid: 9faa10360d24dd243a40e6685e0560e8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 186536777736585362, guid: 9faa10360d24dd243a40e6685e0560e8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3506,6 +3571,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spike_Hor_Tall
       objectReference: {fileID: 0}
+    - target: {fileID: 6819084018337566856, guid: 159bd8f09842e5c4cb7a57cc3c9b5f05,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6819084018337566852, guid: 159bd8f09842e5c4cb7a57cc3c9b5f05,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3660,6 +3730,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HellPlatform_Hor (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 186536777736585357, guid: 9faa10360d24dd243a40e6685e0560e8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 186536777736585362, guid: 9faa10360d24dd243a40e6685e0560e8,
         type: 3}
@@ -4322,6 +4397,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HellPlatform_Ver (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5235011573783335647, guid: 7e4df4a61da402442b99a33741e3466d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5235011573783335618, guid: 7e4df4a61da402442b99a33741e3466d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4418,6 +4498,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HellWall_Hor2 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979550559832468429, guid: 05b9ddee2bb251b40896271cd5d08b05,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1979550559832468430, guid: 05b9ddee2bb251b40896271cd5d08b05,
         type: 3}
@@ -4694,6 +4779,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HellPlatform_Ver (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 5235011573783335647, guid: 7e4df4a61da402442b99a33741e3466d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5235011573783335618, guid: 7e4df4a61da402442b99a33741e3466d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4784,6 +4874,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HellWall_Corner3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242245296236395661, guid: 44311fbf4d12aca4486fe8e0c114c75c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7242245296236395662, guid: 44311fbf4d12aca4486fe8e0c114c75c,
         type: 3}
@@ -4947,6 +5042,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fire (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4729470390351158571, guid: 070743dcca5d16d47a9c6eac4c5a5d46,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7266279758366088979, guid: 070743dcca5d16d47a9c6eac4c5a5d46,
         type: 3}
@@ -5122,6 +5222,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HellWall_Hor2 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1979550559832468429, guid: 05b9ddee2bb251b40896271cd5d08b05,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1979550559832468430, guid: 05b9ddee2bb251b40896271cd5d08b05,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5220,6 +5325,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pickup_Bean (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6656398366734150357, guid: 715db93926f83674aa0f96bf59ea4627,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6656398366734150355, guid: 715db93926f83674aa0f96bf59ea4627,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5288,6 +5398,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HellWall_Hor2 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979550559832468429, guid: 05b9ddee2bb251b40896271cd5d08b05,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1979550559832468430, guid: 05b9ddee2bb251b40896271cd5d08b05,
         type: 3}
@@ -5459,6 +5574,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HellPlatform_Ver (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5235011573783335647, guid: 7e4df4a61da402442b99a33741e3466d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5235011573783335618, guid: 7e4df4a61da402442b99a33741e3466d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5537,6 +5657,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HellPlatform_Ver (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235011573783335647, guid: 7e4df4a61da402442b99a33741e3466d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5235011573783335618, guid: 7e4df4a61da402442b99a33741e3466d,
         type: 3}
@@ -5629,6 +5754,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HellWall_Hor2 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 1979550559832468429, guid: 05b9ddee2bb251b40896271cd5d08b05,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1979550559832468430, guid: 05b9ddee2bb251b40896271cd5d08b05,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5707,6 +5837,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HellWall_Corner6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3242886492490106720, guid: e613b0713a08d134eb18547eaebec1f6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3242886492490106653, guid: e613b0713a08d134eb18547eaebec1f6,
         type: 3}
@@ -5808,6 +5943,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4729470390351158571, guid: 070743dcca5d16d47a9c6eac4c5a5d46,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7266279758366088979, guid: 070743dcca5d16d47a9c6eac4c5a5d46,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5882,6 +6022,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HellWall_Hor2 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979550559832468429, guid: 05b9ddee2bb251b40896271cd5d08b05,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1979550559832468430, guid: 05b9ddee2bb251b40896271cd5d08b05,
         type: 3}
@@ -6040,6 +6185,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HellPlatform_Ver (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235011573783335647, guid: 7e4df4a61da402442b99a33741e3466d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5235011573783335618, guid: 7e4df4a61da402442b99a33741e3466d,
         type: 3}
@@ -6419,6 +6569,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HellWall_Hor2 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1979550559832468429, guid: 05b9ddee2bb251b40896271cd5d08b05,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1979550559832468430, guid: 05b9ddee2bb251b40896271cd5d08b05,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6567,6 +6722,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HellPlatform_Ver (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235011573783335647, guid: 7e4df4a61da402442b99a33741e3466d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5235011573783335618, guid: 7e4df4a61da402442b99a33741e3466d,
         type: 3}
