@@ -52,6 +52,9 @@ TagManager:
   - name: Back-Front
     uniqueID: 1128014395
     locked: 0
+  - name: Fire
+    uniqueID: 2453882401
+    locked: 0
   - name: Player
     uniqueID: 2152094465
     locked: 0
@@ -63,4 +66,7 @@ TagManager:
     locked: 0
   - name: ForeForeForegrond
     uniqueID: 2861866765
+    locked: 0
+  - name: Sigil
+    uniqueID: 3809320089
     locked: 0

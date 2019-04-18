@@ -63,6 +63,7 @@ public class Player_Movement : MonoBehaviour {
     [Header("Corpse_Spawn")]
     
     public GameObject targetClonePrefab;
+    public GameObject RespawnSigil;
     public GameObject Bean_Planted;
     public GameObject clonedPrefab;
     
@@ -402,7 +403,9 @@ public class Player_Movement : MonoBehaviour {
         transform.position = respawnHere.transform.position;
         canMove = true;
         burnTime = maxBurnTime;
-    
+
+        spawnCorpseHere = gameObject.transform.position;
+        Instantiate(RespawnSigil, spawnCorpseHere, transform.rotation);
     }
 }
 
