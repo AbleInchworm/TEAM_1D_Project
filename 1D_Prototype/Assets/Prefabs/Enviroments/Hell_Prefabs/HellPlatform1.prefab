@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2669511681161944482}
   - component: {fileID: 2669511681161944483}
-  - component: {fileID: 2669511681161944480}
+  - component: {fileID: 6009218297342527454}
   m_Layer: 8
   m_Name: HellPlatform1
   m_TagString: Untagged
@@ -80,8 +80,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &2669511681161944480
-PolygonCollider2D:
+--- !u!61 &6009218297342527454
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -93,7 +93,7 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.004904866, y: -0.06866741}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -103,52 +103,6 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.31, y: -0.45}
-      - {x: 0.37, y: -0.51}
-      - {x: 0.57, y: -0.51}
-      - {x: 0.59999996, y: -0.42}
-      - {x: 0.65, y: -0.22}
-      - {x: 0.68, y: -0.26999998}
-      - {x: 0.78, y: -0.26999998}
-      - {x: 0.84999996, y: -0.25}
-      - {x: 0.9, y: -0.21}
-      - {x: 0.96999997, y: 0.099999994}
-      - {x: 1.01, y: 0.42}
-      - {x: 1.01, y: 0.68}
-      - {x: 0.97999996, y: 0.72999996}
-      - {x: 0.87, y: 0.76}
-      - {x: 0.69, y: 0.77}
-      - {x: -0.9, y: 0.77}
-      - {x: -1.04, y: 0.71}
-      - {x: -1.04, y: 0.61}
-      - {x: -1.03, y: 0.59}
-      - {x: -0.96999997, y: 0.59}
-      - {x: -1.01, y: 0.59}
-      - {x: -1.04, y: 0.58}
-      - {x: -1.04, y: 0.57}
-      - {x: -1, y: 0.39999998}
-      - {x: -0.96, y: 0.29}
-      - {x: -0.91999996, y: 0.12}
-      - {x: -0.89, y: -0.04}
-      - {x: -0.81, y: -0.16}
-      - {x: -0.83, y: -0.19}
-      - {x: -0.81, y: -0.31}
-      - {x: -0.78999996, y: -0.35999998}
-      - {x: -0.74, y: -0.37}
-      - {x: -0.66999996, y: -0.63}
-      - {x: -0.57, y: -0.7}
-      - {x: -0.47, y: -0.64}
-      - {x: -0.44, y: -0.53}
-      - {x: -0.35999998, y: -0.34}
-      - {x: -0.31, y: -0.41}
-      - {x: -0.25, y: -0.57}
-      - {x: -0.19999999, y: -0.68}
-      - {x: -0.14, y: -0.78}
-      - {x: -0.049999997, y: -0.87}
-      - {x: 0.089999996, y: -0.87}
-      - {x: 0.16, y: -0.84}
-      - {x: 0.22, y: -0.69}
-      - {x: 0.26999998, y: -0.48999998}
-      - {x: 0.29, y: -0.38}
+  serializedVersion: 2
+  m_Size: {x: 1.9661844, y: 1.5639913}
+  m_EdgeRadius: 0
