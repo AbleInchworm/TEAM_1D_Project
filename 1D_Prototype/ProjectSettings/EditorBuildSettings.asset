@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: af7624dda554e2841aa4d381229ab2f3
   - enabled: 1
-    path: Assets/Scenes/Rizwan/Tutorial Level - Backup 1.unity
+    path: Assets/Scenes/Rizwan/Tutorial Level.unity
     guid: e8168bed86364e547ae50dfc6579ced5
   - enabled: 1
     path: Assets/Scenes/Rizwan/Riz Level New.unity
