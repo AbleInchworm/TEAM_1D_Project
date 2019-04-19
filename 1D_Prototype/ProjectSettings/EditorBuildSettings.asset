@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: af7624dda554e2841aa4d381229ab2f3
   - enabled: 1
-    path: Assets/Scenes/Code_Tests/Tutorial Level - Backup.unity
-    guid: 7ddc68a4fc0ceb945be96f612072abdf
+    path: Assets/Scenes/Rizwan/Tutorial Level - Backup 1.unity
+    guid: e8168bed86364e547ae50dfc6579ced5
   - enabled: 1
-    path: Assets/Scenes/Rizwan/Level One- Riz.unity
-    guid: 825e273c45d48bd44908099e88b029e1
+    path: Assets/Scenes/Rizwan/Riz Level New.unity
+    guid: 30ec75f5e77ecf148b56d609579e0391
   - enabled: 1
     path: Assets/Scenes/Callum.R Test Levels/TEST 3.unity
     guid: 193e38cee5059e648aef06a1e567b70e
