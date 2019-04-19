@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4302398681290620}
   - component: {fileID: 212324827354185448}
+  - component: {fileID: 3115302243164606620}
   m_Layer: 11
   m_Name: New Sprite
   m_TagString: Untagged
@@ -66,7 +67,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2142872831
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300012, guid: 7f15f7c96e7432347a5048af137c7c26, type: 3}
   m_Color: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 1}
@@ -79,6 +80,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3115302243164606620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239210780240234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 929deb57f26729c4c9c350bc16d972fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visibleDelay: 60
 --- !u!1 &1285991972539178
 GameObject:
   m_ObjectHideFlags: 0
@@ -4837,7 +4851,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2142872831
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
