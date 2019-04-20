@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
-public class Player_Movement : MonoBehaviour {
+public class PlayerMovementCutscene : MonoBehaviour {
 
     public static Player_Movement instance;
 
@@ -23,7 +23,7 @@ public class Player_Movement : MonoBehaviour {
     public bool isBurnt;
     [HideInInspector]
     public bool isDead;
-    public bool isGrounded;
+    private bool isGrounded;
     private bool isOnCorpse;
     private bool isOnFire;
     private bool bouncing;
@@ -94,13 +94,6 @@ public class Player_Movement : MonoBehaviour {
 
     public GameObject SceneManager;
 
-
-    void Awake()
-    {
-        if (instance == null)
-            instance = this;
-    }
-
     void Start()
     {
         canMove = true;
@@ -145,21 +138,21 @@ public class Player_Movement : MonoBehaviour {
     {
         Debug.Log(isGrounded);
 
-        PlayerCrouch();
+        //PlayerCrouch();
 
         PlayerMovement();
 
         PlayerStateCheck();
 
-        PlayerJump();
+        //PlayerJump();
 
         HandleLayers();
 
-        Suicide();
+        //Suicide();
 
-        FireCheck();
+        //FireCheck();
 
-        PlayerPlant();
+        //PlayerPlant();
 
         fireTimerText.text = Mathf.Round(burnTime).ToString();
         beanCounterText.text = myBeans.ToString();

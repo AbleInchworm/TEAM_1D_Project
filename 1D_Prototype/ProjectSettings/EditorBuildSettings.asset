@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Rizwan/Tutorial Level.unity
     guid: e8168bed86364e547ae50dfc6579ced5
   - enabled: 1
+    path: Assets/Scenes/Level Prefab.unity
+    guid: c1c8f6ac8d334a640b6bc173dca85a6d
+  - enabled: 1
+    path: Assets/Scenes/MattLevelOne.unity
+    guid: d8a04204214ecc64f8151d4357778695
+  - enabled: 1
     path: Assets/Scenes/Rizwan/Riz Level New.unity
     guid: 30ec75f5e77ecf148b56d609579e0391
   - enabled: 1
