@@ -6,21 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Main Menu.unity
+    path: Assets/Scenes/Final Levels/Main Menu.unity
     guid: af7624dda554e2841aa4d381229ab2f3
   - enabled: 1
-    path: Assets/Scenes/Tutorial Level.unity
+    path: Assets/Scenes/Final Levels/Tutorial Level.unity
     guid: 868348d47f82c5c4886b324c307751a4
   - enabled: 1
-    path: Assets/Scenes/Level Prefab.unity
+    path: Assets/Scenes/Final Levels/Level Prefab.unity
     guid: c1c8f6ac8d334a640b6bc173dca85a6d
   - enabled: 1
-    path: Assets/Scenes/MattLevelOne.unity
+    path: Assets/Scenes/Final Levels/MattLevelOne.unity
     guid: d8a04204214ecc64f8151d4357778695
   - enabled: 1
-    path: Assets/Scenes/Rizwan/Riz Level New.unity
+    path: Assets/Scenes/Final Levels/Riz Level New.unity
     guid: 30ec75f5e77ecf148b56d609579e0391
   - enabled: 1
-    path: Assets/Scenes/Callum.R Test Levels/TEST 3.unity
-    guid: 193e38cee5059e648aef06a1e567b70e
+    path: Assets/Scenes/Final Levels/TEST 4.unity
+    guid: f8cd2db35a4b2434e97bc44ff37b3e79
   m_configObjects: {}
