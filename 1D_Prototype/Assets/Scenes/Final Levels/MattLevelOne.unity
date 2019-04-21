@@ -6995,33 +6995,6 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: 0.31
       objectReference: {fileID: 0}
-    - target: {fileID: 934691111038847786, guid: 092bd3bb95b16e640914f546a5918c62,
-        type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 243287004710917622, guid: a6294ea156c8657439c95da5f813b62c,
-        type: 2}
-    - target: {fileID: 934691111038847786, guid: 092bd3bb95b16e640914f546a5918c62,
-        type: 3}
-      propertyPath: BypassEffects
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 93209313846761105, guid: 092bd3bb95b16e640914f546a5918c62,
-        type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 243355332125623992, guid: a6294ea156c8657439c95da5f813b62c,
-        type: 2}
-    - target: {fileID: 1143968337, guid: 092bd3bb95b16e640914f546a5918c62, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 243281535914574810, guid: a6294ea156c8657439c95da5f813b62c,
-        type: 2}
-    - target: {fileID: 1143968330, guid: 092bd3bb95b16e640914f546a5918c62, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 243557172755571666, guid: a6294ea156c8657439c95da5f813b62c,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 092bd3bb95b16e640914f546a5918c62, type: 3}
 --- !u!1001 &938163303

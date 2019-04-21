@@ -905,6 +905,15 @@ PrefabInstance:
       propertyPath: doubleJumpSFX.Array.data[5]
       value: 
       objectReference: {fileID: 8300000, guid: d45dd46ba3889cd44ac242dc88980ba4, type: 3}
+    - target: {fileID: 1143968330, guid: 092bd3bb95b16e640914f546a5918c62, type: 3}
+      propertyPath: m_Volume
+      value: 0.801
+      objectReference: {fileID: 0}
+    - target: {fileID: 1143968330, guid: 092bd3bb95b16e640914f546a5918c62, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243557172755571666, guid: a6294ea156c8657439c95da5f813b62c,
+        type: 2}
     - target: {fileID: 1976952983, guid: 092bd3bb95b16e640914f546a5918c62, type: 3}
       propertyPath: m_Pitch
       value: 2.03
