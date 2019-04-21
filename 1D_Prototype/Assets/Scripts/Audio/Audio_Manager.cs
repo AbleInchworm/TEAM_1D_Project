@@ -81,11 +81,4 @@ public class Audio_Manager : MonoBehaviour
         playerSFX.clip = clips[randomIndex];
         playerSFX.Play();
     }
-
-    public void PlayerJumpSFX(params AudioClip[] clips)
-    {       
-        int randomIndex = Random.Range(0, playerJump.Length); // randomly select a clip from the Jump sound array       
-        playerSFX.clip = clips[randomIndex];
-        playerSFX.Play();       
-    }   
 }

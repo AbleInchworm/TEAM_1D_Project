@@ -777,6 +777,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114399127668525478, guid: 092bd3bb95b16e640914f546a5918c62,
         type: 3}
+      propertyPath: doubleJumpSFX.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114399127668525478, guid: 092bd3bb95b16e640914f546a5918c62,
+        type: 3}
       propertyPath: respawnHere
       value: 
       objectReference: {fileID: 2000041601}
@@ -795,6 +800,45 @@ PrefabInstance:
       propertyPath: beanCounter
       value: 
       objectReference: {fileID: 1644291251}
+    - target: {fileID: 114399127668525478, guid: 092bd3bb95b16e640914f546a5918c62,
+        type: 3}
+      propertyPath: doubleJumpSFX.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: a4ffaf42247a5f94590ae18c52909729, type: 3}
+    - target: {fileID: 114399127668525478, guid: 092bd3bb95b16e640914f546a5918c62,
+        type: 3}
+      propertyPath: doubleJumpSFX.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 573a7e8d314fc954ba6d9a31a4987e52, type: 3}
+    - target: {fileID: 114399127668525478, guid: 092bd3bb95b16e640914f546a5918c62,
+        type: 3}
+      propertyPath: doubleJumpSFX.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 90dba66050a57a34493636c74654e2a6, type: 3}
+    - target: {fileID: 114399127668525478, guid: 092bd3bb95b16e640914f546a5918c62,
+        type: 3}
+      propertyPath: doubleJumpSFX.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8d623f46362a6d543a7108108b2472be, type: 3}
+    - target: {fileID: 114399127668525478, guid: 092bd3bb95b16e640914f546a5918c62,
+        type: 3}
+      propertyPath: doubleJumpSFX.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: eb7046090d7aa2c438700bb57c8a0d9d, type: 3}
+    - target: {fileID: 114399127668525478, guid: 092bd3bb95b16e640914f546a5918c62,
+        type: 3}
+      propertyPath: doubleJumpSFX.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: d45dd46ba3889cd44ac242dc88980ba4, type: 3}
+    - target: {fileID: 1976952983, guid: 092bd3bb95b16e640914f546a5918c62, type: 3}
+      propertyPath: m_Pitch
+      value: 2.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1005466336732344464, guid: 092bd3bb95b16e640914f546a5918c62,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 092bd3bb95b16e640914f546a5918c62, type: 3}
 --- !u!1001 &208319882

@@ -23,8 +23,12 @@ public class Player_Movement : MonoBehaviour {
     public AudioSource playerRespawn;
     public AudioSource beanPlanted;
     public AudioSource crouchingSource;
+    public AudioSource jumpSource;
+    public AudioSource doubleJumpSource;
     public AudioClip crouchIn;
     public AudioClip crouchOut;
+    public AudioClip[] jumpSFX;
+    public AudioClip[] doubleJumpSFX;
     // Player states
 
     public bool isBurnt;
@@ -153,8 +157,6 @@ public class Player_Movement : MonoBehaviour {
 
     void Update()
     {
-        Debug.Log(isGrounded);
-
         PlayerCrouch();
 
         PlayerMovement();
@@ -264,10 +266,12 @@ public class Player_Movement : MonoBehaviour {
                 jumpTimeCounter = jumpHoldTime;
                 rb2d.velocity += Vector2.up * jumpHeight;
                 extraJumps--;
+                DoubleJumpSFXCall();
             }
             else if (isGrounded == true && Input.GetKeyDown(KeyCode.Space) && extraJumps == 0)
             {
                 rb2d.velocity += Vector2.up * jumpHeight;
+
             }
 
             // jump force increases the longer jump is held
@@ -414,13 +418,20 @@ public class Player_Movement : MonoBehaviour {
         {
             Audio_Manager.instance.RandomPlayerFS(Audio_Manager.instance.playerFSWood); // if the player is grounded, allow the animation events to access the audio_manager
         }
-
-
     }
 
     public void PlayerJumpSFXCall()
     {
-        Audio_Manager.instance.PlayerJumpSFX();
+        int randomIndex = Random.Range(0, 7);
+        jumpSource.clip = jumpSFX[randomIndex];
+        jumpSource.Play();
+    }
+
+    public void DoubleJumpSFXCall()
+    {
+        int randomIndex = Random.Range(0, 6);
+        doubleJumpSource.clip = doubleJumpSFX[randomIndex];
+        doubleJumpSource.Play();
     }
 
     public void InCrouchSFX()
