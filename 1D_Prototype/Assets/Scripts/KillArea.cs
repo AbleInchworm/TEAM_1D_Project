@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class KillArea : MonoBehaviour {
-
+    
     public Player_Movement player;
     public ParticleSystem spiked;
 
@@ -17,12 +17,13 @@ public class KillArea : MonoBehaviour {
     {
         if (collision.gameObject.name == "Player_Controller")
         {
+            
+            
             if (player.isDead == false)
             {
-                spiked.Play();
+                spiked.Play();               
                 player.isDead = true;
                 player.KillPlayer();
-
             }
         }       
     }

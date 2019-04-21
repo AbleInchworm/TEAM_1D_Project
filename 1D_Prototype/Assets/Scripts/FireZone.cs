@@ -5,6 +5,7 @@ using UnityEngine;
 public class FireZone : MonoBehaviour
 {
     private Player_Movement player;
+    public AudioSource fireSFX;
 
     void Awake()
     {
@@ -14,8 +15,9 @@ public class FireZone : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        print("burning");
-        player.isBurnt = true;     
+        fireSFX.Play();
+        player.isBurnt = true;   
+        
     }
 
 }

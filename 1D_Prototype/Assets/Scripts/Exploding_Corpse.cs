@@ -9,5 +9,5 @@ public class Exploding_Corpse : MonoBehaviour {
     public void Playexplode()
     {
         explode.Play();
-    }  
+    }   
 }

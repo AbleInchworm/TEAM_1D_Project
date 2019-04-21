@@ -7,18 +7,26 @@ public class Audio_Manager : MonoBehaviour
 {
     public static Audio_Manager instance = null;
 
+    DeathScreenSFX dScreen;
+
     public float pitchMin;
     public float pitchMax;
     public float sourceVol;
 
+    [Header("Marshy Audio")]
     public AudioClip[] playerFSGrass;
     public AudioClip[] playerFSConcrete;
+    public AudioClip[] bounceSFX;
     public AudioClip[] playerDeath;
+    public AudioClip[] playerJump;
+
+
     public AudioSource playerSFX;
     public AudioMixerGroup playerMixer;
 
-    AudioSource m_MyAudioSource;
+    AudioSource m_MyPlayerSource;
     GameObject myplayerSFX;
+
 
     private void Awake()
     {
@@ -36,9 +44,16 @@ public class Audio_Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        myplayerSFX = GameObject.Find("playerSFX");
-        m_MyAudioSource = myplayerSFX.GetComponent<AudioSource>();
-        playerSFX = m_MyAudioSource;
+        myplayerSFX = GameObject.Find("Fs_Source");     
+        m_MyPlayerSource = myplayerSFX.GetComponent<AudioSource>();       
+        playerSFX = m_MyPlayerSource;
+
+    }
+
+    public void PlaySound(AudioClip clip)
+    {
+        playerSFX.clip = clip;
+        playerSFX.Play();
     }
 
     public void RandomPlayerFS (params AudioClip[] clips)
@@ -53,17 +68,23 @@ public class Audio_Manager : MonoBehaviour
 
     public void RandomDeath(params AudioClip[] clips)
     {
-        int randomIndex = Random.Range(0, playerDeath.Length); // randomly select a clip from the death sound array
-        float randomPitch = Random.Range(pitchMin, pitchMax); // randomlly assign a pitch to that sound
+        int randomIndex = Random.Range(0, playerDeath.Length - 1); // randomly select a clip from the death sound array       
+        playerSFX.clip = clips[randomIndex];
+        playerSFX.Play();
+        
+    }
 
-        playerSFX.pitch = randomPitch;
+    public void CorpseBounce(params AudioClip[] clips)
+    {
+        int randomIndex = Random.Range(0, bounceSFX.Length - 1); // randomly select a clip from the Bounce sound array       
         playerSFX.clip = clips[randomIndex];
         playerSFX.Play();
     }
 
-    public void PlaySound (AudioClip clip)
-    {
-        playerSFX.clip = clip;
-        playerSFX.Play();
-    }
+    public void PlayerJumpSFX(params AudioClip[] clips)
+    {       
+        int randomIndex = Random.Range(0, playerJump.Length - 1); // randomly select a clip from the Jump sound array       
+        playerSFX.clip = clips[randomIndex];
+        playerSFX.Play();       
+    }   
 }

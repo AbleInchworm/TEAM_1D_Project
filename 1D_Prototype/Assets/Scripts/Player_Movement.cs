@@ -18,8 +18,12 @@ public class Player_Movement : MonoBehaviour {
     // player animator  
     public Animator anim;
 
+    [Header("Audio_Sources")]
+    public AudioSource uiDeathSFX;
+    public AudioSource playerRespawn;
+    public AudioSource beanPlanted;
     // Player states
-    
+
     public bool isBurnt;
     [HideInInspector]
     public bool isDead;
@@ -29,6 +33,9 @@ public class Player_Movement : MonoBehaviour {
     private bool bouncing;
     private bool isInAir;
     private bool canMove;
+    public bool isOnGrass;
+    public bool isOnWood;
+    public bool isOnStone;
 
     [Header("Player_Movement")]
     public float moveSpeed;
@@ -292,9 +299,10 @@ public class Player_Movement : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.Q) && (myBeans > 0) && (isGrounded))
             {
-            spawnCorpseHere = gameObject.transform.position;
-            Instantiate(Bean_Planted, spawnCorpseHere, transform.rotation);
-            myBeans -= 1;
+                beanPlanted.Play();
+                spawnCorpseHere = gameObject.transform.position;
+                Instantiate(Bean_Planted, spawnCorpseHere, transform.rotation);
+                myBeans -= 1;          
             }
         }
     }
@@ -303,6 +311,7 @@ public class Player_Movement : MonoBehaviour {
             // bounces the character when he is on his corpse 
     void corpseBounce()
     {
+        Audio_Manager.instance.RandomDeath(Audio_Manager.instance.bounceSFX); // play random bounce SFX
         rb2d.velocity = Vector2.zero; //resetbounce force to stop stacking
         rb2d.velocity = Vector2.up * bounceForce; //apply up force relative to the bounce force float
     }
@@ -323,8 +332,9 @@ public class Player_Movement : MonoBehaviour {
         isBurnt = false;
         deathUI.SetBool("Death_Screen", true);
         playerAnim.SetBool("Is_Dead", true);
+        uiDeathSFX.Play();
         Audio_Manager.instance.RandomDeath(Audio_Manager.instance.playerDeath);
-
+        
         StartCoroutine(OnPlayerDeath());
         
     }
@@ -389,10 +399,20 @@ public class Player_Movement : MonoBehaviour {
 
     public void PlayerFS()
     {
-        if (isGrounded)
+        if (isGrounded && isOnGrass)
         {
             Audio_Manager.instance.RandomPlayerFS(Audio_Manager.instance.playerFSGrass); // if the player is grounded, allow the animation events to access the audio_manager
-        }      
+        }
+
+        if (isGrounded && isOnStone)
+        {
+            Audio_Manager.instance.RandomPlayerFS(Audio_Manager.instance.playerFSConcrete); // if the player is grounded, allow the animation events to access the audio_manager
+        }
+    }
+
+    public void PlayerJumpSFXCall()
+    {
+        Audio_Manager.instance.PlayerJumpSFX();
     }
 
     public IEnumerator OnPlayerDeath()
@@ -406,6 +426,7 @@ public class Player_Movement : MonoBehaviour {
 
         spawnCorpseHere = gameObject.transform.position;
         Instantiate(RespawnSigil, spawnCorpseHere, transform.rotation);
+        playerRespawn.Play();
     }
 }
 
