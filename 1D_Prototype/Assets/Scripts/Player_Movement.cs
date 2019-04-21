@@ -265,8 +265,9 @@ public class Player_Movement : MonoBehaviour {
                 isJumping = true;
                 jumpTimeCounter = jumpHoldTime;
                 rb2d.velocity += Vector2.up * jumpHeight;
-                extraJumps--;
                 DoubleJumpSFXCall();
+                extraJumps--;
+                
             }
             else if (isGrounded == true && Input.GetKeyDown(KeyCode.Space) && extraJumps == 0)
             {
@@ -422,15 +423,15 @@ public class Player_Movement : MonoBehaviour {
 
     public void PlayerJumpSFXCall()
     {
-        int randomIndex = Random.Range(0, 7);
+        int randomIndex = Random.Range(0, 6);
         jumpSource.clip = jumpSFX[randomIndex];
         jumpSource.Play();
     }
 
     public void DoubleJumpSFXCall()
     {
-        int randomIndex = Random.Range(0, 6);
-        doubleJumpSource.clip = doubleJumpSFX[randomIndex];
+        int randomIndexD = Random.Range(0, 5);
+        doubleJumpSource.clip = doubleJumpSFX[randomIndexD];
         doubleJumpSource.Play();
     }
 

@@ -122,7 +122,13 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 33ce9968a3ba10f448aaccfefa5dfb05, type: 3}
   - {fileID: 8300000, guid: 52024ec6fc215754cad1b64734899dff, type: 3}
   - {fileID: 8300000, guid: baea57d9a0c330e41adf6d4186989712, type: 3}
-  doubleJumpSFX: []
+  doubleJumpSFX:
+  - {fileID: 8300000, guid: a4ffaf42247a5f94590ae18c52909729, type: 3}
+  - {fileID: 8300000, guid: 573a7e8d314fc954ba6d9a31a4987e52, type: 3}
+  - {fileID: 8300000, guid: 90dba66050a57a34493636c74654e2a6, type: 3}
+  - {fileID: 8300000, guid: 8d623f46362a6d543a7108108b2472be, type: 3}
+  - {fileID: 8300000, guid: eb7046090d7aa2c438700bb57c8a0d9d, type: 3}
+  - {fileID: 8300000, guid: d45dd46ba3889cd44ac242dc88980ba4, type: 3}
   isBurnt: 0
   isDead: 0
   isGrounded: 0

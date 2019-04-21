@@ -69,7 +69,7 @@ public class Audio_Manager : MonoBehaviour
 
     public void RandomDeath(params AudioClip[] clips)
     {
-        int randomIndex = Random.Range(0, playerDeath.Length); // randomly select a clip from the death sound array       
+        int randomIndex = Random.Range(0, playerDeath.Length-1); // randomly select a clip from the death sound array       
         playerSFX.clip = clips[randomIndex];
         playerSFX.Play();
         
