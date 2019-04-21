@@ -16,6 +16,7 @@ public class Audio_Manager : MonoBehaviour
     [Header("Marshy Audio")]
     public AudioClip[] playerFSGrass;
     public AudioClip[] playerFSConcrete;
+    public AudioClip[] playerFSWood;
     public AudioClip[] bounceSFX;
     public AudioClip[] playerDeath;
     public AudioClip[] playerJump;
@@ -58,7 +59,7 @@ public class Audio_Manager : MonoBehaviour
 
     public void RandomPlayerFS (params AudioClip[] clips)
     {
-        int randomIndex = Random.Range(0, playerFSGrass.Length); // randomly select a clip from the footstep sound array
+        int randomIndex = Random.Range(0, 8); // randomly select a clip from the footstep sound array
         float randomPitch = Random.Range(pitchMin, pitchMax); // randomlly assign a pitch to that sound
 
         playerSFX.pitch = randomPitch;
@@ -68,7 +69,7 @@ public class Audio_Manager : MonoBehaviour
 
     public void RandomDeath(params AudioClip[] clips)
     {
-        int randomIndex = Random.Range(0, playerDeath.Length - 1); // randomly select a clip from the death sound array       
+        int randomIndex = Random.Range(0, playerDeath.Length); // randomly select a clip from the death sound array       
         playerSFX.clip = clips[randomIndex];
         playerSFX.Play();
         
@@ -76,14 +77,14 @@ public class Audio_Manager : MonoBehaviour
 
     public void CorpseBounce(params AudioClip[] clips)
     {
-        int randomIndex = Random.Range(0, bounceSFX.Length - 1); // randomly select a clip from the Bounce sound array       
+        int randomIndex = Random.Range(0, bounceSFX.Length); // randomly select a clip from the Bounce sound array       
         playerSFX.clip = clips[randomIndex];
         playerSFX.Play();
     }
 
     public void PlayerJumpSFX(params AudioClip[] clips)
     {       
-        int randomIndex = Random.Range(0, playerJump.Length - 1); // randomly select a clip from the Jump sound array       
+        int randomIndex = Random.Range(0, playerJump.Length); // randomly select a clip from the Jump sound array       
         playerSFX.clip = clips[randomIndex];
         playerSFX.Play();       
     }   

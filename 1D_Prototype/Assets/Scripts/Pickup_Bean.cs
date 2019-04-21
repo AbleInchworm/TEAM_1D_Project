@@ -11,6 +11,8 @@ public class Pickup_Bean : MonoBehaviour
     public float tick;
     bool isGrowing;
 
+    public AudioSource beanPickUp;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +53,7 @@ public class Pickup_Bean : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        beanPickUp.Play();
         FindObjectOfType<Player_Movement>().myBeans += 1;
         Destroy(gameObject);
     }

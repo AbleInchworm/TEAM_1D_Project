@@ -37,6 +37,6 @@ public class ButterBeanBehaviour : MonoBehaviour
         if (dist > 5)
             visible.enabled = false;
         else
-            visible.enabled = true;
+            visible.enabled = true;        
     }
 }

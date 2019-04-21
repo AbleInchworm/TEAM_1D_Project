@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FS_State_Stone : MonoBehaviour
+public class FS_State_Grass : MonoBehaviour
 {
     Player_Movement player;
- 
+
     void Start()
     {
         player = GameObject.Find("Player_Controller").GetComponent<Player_Movement>();
@@ -13,11 +13,11 @@ public class FS_State_Stone : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        player.isOnStone = true;
+        player.isOnGrass = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        player.isOnStone = false;
-    }    
+        player.isOnGrass = false;
+    }
 }

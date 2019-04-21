@@ -18,10 +18,13 @@ public class Player_Movement : MonoBehaviour {
     // player animator  
     public Animator anim;
 
-    [Header("Audio_Sources")]
+    [Header("Audio")]
     public AudioSource uiDeathSFX;
     public AudioSource playerRespawn;
     public AudioSource beanPlanted;
+    public AudioSource crouchingSource;
+    public AudioClip crouchIn;
+    public AudioClip crouchOut;
     // Player states
 
     public bool isBurnt;
@@ -170,8 +173,6 @@ public class Player_Movement : MonoBehaviour {
 
         fireTimerText.text = Mathf.Round(burnTime).ToString();
         beanCounterText.text = myBeans.ToString();
-
-
 
     }
 
@@ -408,11 +409,30 @@ public class Player_Movement : MonoBehaviour {
         {
             Audio_Manager.instance.RandomPlayerFS(Audio_Manager.instance.playerFSConcrete); // if the player is grounded, allow the animation events to access the audio_manager
         }
+
+        if (isGrounded && isOnWood)
+        {
+            Audio_Manager.instance.RandomPlayerFS(Audio_Manager.instance.playerFSWood); // if the player is grounded, allow the animation events to access the audio_manager
+        }
+
+
     }
 
     public void PlayerJumpSFXCall()
     {
         Audio_Manager.instance.PlayerJumpSFX();
+    }
+
+    public void InCrouchSFX()
+    {
+        crouchingSource.clip = crouchIn;
+        crouchingSource.Play();
+    }
+
+    public void OutCrouchSFX()
+    {
+        crouchingSource.clip = crouchOut;
+        crouchingSource.Play();
     }
 
     public IEnumerator OnPlayerDeath()
