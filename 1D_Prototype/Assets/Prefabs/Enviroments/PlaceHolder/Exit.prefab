@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4649128138806254396}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 26.55, y: -3.02, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 2.8178, y: 2.8178, z: 1.4089}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -96,7 +96,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0344944, y: 0.0044207573}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -107,7 +107,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3, y: 3}
+  m_Size: {x: 2.2745142, y: 2.1335115}
   m_EdgeRadius: 0
 --- !u!114 &4649128138806254384
 MonoBehaviour:
@@ -152,9 +152,10 @@ AudioSource:
   m_GameObject: {fileID: 4649128138806254396}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243089711360366514, guid: a6294ea156c8657439c95da5f813b62c,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: dcbade229ac21394ba3d406846160119, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -164,7 +165,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 0
   MinDistance: 1
-  MaxDistance: 9.368217
+  MaxDistance: 32.240078
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -174,17 +175,8 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.06666667
-      value: 1
-      inSlope: -15.005997
-      outSlope: -15.005997
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.18181814
-      value: 0.6430969
+      time: 0.09394278
+      value: 0.45529175
       inSlope: -3.7514992
       outSlope: -3.7514992
       tangentMode: 0
@@ -192,8 +184,8 @@ AudioSource:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.36363629
-      value: 0.37519836
+      time: 0.37878826
+      value: 0.20974731
       inSlope: -0.9378748
       outSlope: -0.9378748
       tangentMode: 0
@@ -201,8 +193,8 @@ AudioSource:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.5909048
-      value: 0.29045105
+      time: 0.5757528
+      value: 0.125
       inSlope: -0.2344687
       outSlope: -0.2344687
       tangentMode: 0
@@ -210,8 +202,8 @@ AudioSource:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 1
-      value: 0.06666667
+      time: 0.9787903
+      value: 0.0040598586
       inSlope: -0.06669331
       outSlope: -0.06669331
       tangentMode: 0
