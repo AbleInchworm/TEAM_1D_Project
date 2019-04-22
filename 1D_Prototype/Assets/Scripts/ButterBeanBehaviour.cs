@@ -12,6 +12,7 @@ public class ButterBeanBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //find the player character to be able to calculate distance; use a "visible" var to switch the dialogue box off and on
         playerControler = FindObjectOfType<Player_Movement>().gameObject;
         visible = textImage1.GetComponent<SpriteRenderer>();
     }
@@ -21,6 +22,7 @@ public class ButterBeanBehaviour : MonoBehaviour
     {
         float dist = Vector3.Distance(playerControler. transform.position, transform.position);
 
+        //face the player when talking to them by flipping the sprite
         if ((playerControler.transform.position.x) > (transform.position.x))
         {
             Vector3 newScale = transform.localScale;
@@ -34,6 +36,7 @@ public class ButterBeanBehaviour : MonoBehaviour
             transform.localScale = newScale;
         }
 
+        //depending on the distance to the player, show or hide the dialogue box
         if (dist > 5)
             visible.enabled = false;
         else

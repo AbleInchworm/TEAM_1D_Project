@@ -29,6 +29,7 @@ public class ExitLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //animate the portal by having it expand/shrink and spin
         transform.Rotate(new Vector3(0, 0, spinSpeed));
 
         if (isGrowing == true)
@@ -56,8 +57,14 @@ public class ExitLevel : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //set the Point Tracker's beans count to the player's bean count to preserve the amount of beans between levels
         FindObjectOfType<Point_Tracker>().beansFromLevel = FindObjectOfType<Player_Movement>().myBeans; ;
+
+        //progreess through scenes by adding 1 to the scene index; if it's the last scene, end the game
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        if (currentSceneIndex == 5)
+            Application.Quit();
+        else
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 }

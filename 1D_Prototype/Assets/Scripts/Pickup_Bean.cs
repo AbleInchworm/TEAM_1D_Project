@@ -27,6 +27,7 @@ public class Pickup_Bean : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //animate the bean by having it expand and shrink and glow
         if (isGrowing == true)
         {
             transform.localScale += new Vector3(stepScale, stepScale, 0);
@@ -53,6 +54,7 @@ public class Pickup_Bean : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //colect the bean and add it to the count
         beanPickUp.Play();
         FindObjectOfType<Player_Movement>().myBeans += 1;
         Destroy(gameObject);

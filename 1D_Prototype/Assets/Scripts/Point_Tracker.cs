@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Point_Tracker : MonoBehaviour
 {
+    //preserve the beans between levels by telling the player how many to gain after exiting each level; 
     public int beansFromLevel;
 
     // Start is called before the first frame update

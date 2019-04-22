@@ -301,6 +301,7 @@ public class Player_Movement : MonoBehaviour {
 
     public void PlayerPlant()
     {
+        //if the player has enough beans, is on the ground and can move, spawn a bean prefab at their location
         if (canMove)
         {
             if (Input.GetKeyDown(KeyCode.Q) && (myBeans > 0) && (isGrounded))
